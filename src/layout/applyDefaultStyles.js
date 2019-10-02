@@ -8,6 +8,7 @@ import * as R from 'ramda';
  */
 const applyRunStyles = R.evolve({
   attributes: a => ({
+    ...a,
     align: a.align || 'left',
     alignLastLine: a.alignLastLine || (a.align === 'justify' ? 'left' : a.align || 'left'),
     attachment: a.attachment || null,
